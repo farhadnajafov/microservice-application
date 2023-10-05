@@ -9,7 +9,7 @@ import org.mapstruct.*;
 @Mapper(componentModel = "spring",unmappedTargetPolicy = ReportingPolicy.IGNORE,
         nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
 public interface StudentMapper {
-//    @Mapping(target = "id", ignore = true)
+    @Mapping(target = "id", ignore = true)
     Student mapRequestToStudent(CreateStudentRequest request);
 
     StudentResponse mapEntityToResponse(Student student);

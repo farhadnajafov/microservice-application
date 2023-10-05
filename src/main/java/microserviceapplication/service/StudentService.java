@@ -28,6 +28,7 @@ public class StudentService {
     }
 
     public List<StudentResponse> getAllStudents(){
+
         return studentRepository.findAll()
                 .stream()
                 .map(studentMapper::mapEntityToResponse)
